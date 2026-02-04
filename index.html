@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Secure Patient Medical Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>🏥 Secure Medical Record Portal</h1>
+  <p>Patient-Controlled | Zero Trust | Encrypted Access</p>
+</header>
+
+<main class="dashboard">
+
+  <!-- Patient Profile -->
+  <section class="card profile">
+    <h2>👤 Welcome, Patient</h2>
+    <p>Data Status: <span class="secure">🔒 Fully Encrypted</span></p>
+  </section>
+
+  <!-- Medical Timeline -->
+  <section class="card">
+    <h2>📊 Medical History</h2>
+    <ul class="timeline" id="timeline"></ul>
+  </section>
+
+  <!-- Access Control -->
+  <section class="card">
+    <h2>🔑 Access Permissions</h2>
+    <div id="accessList"></div>
+  </section>
+
+  <!-- Emergency Access -->
+  <section class="card emergency">
+    <h2>🚨 Emergency Access</h2>
+    <p>Grant temporary access in emergencies only.</p>
+    <button class="danger" onclick="activateEmergency()">Activate Emergency Mode</button>
+    <p id="emergencyStatus"></p>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

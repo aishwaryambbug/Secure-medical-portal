@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://127.0.0.1:5500/css/secure-medical-portal/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Secure Patient Medical Portal</title>
+  <link rel="stylesheet" href="./Secure Patient Medical Portal_files/style.css">
+</head>
+<body>
+
+<header>
+  <h1>🏥 Secure Medical Record Portal</h1>
+  <p>Patient-Controlled | Zero Trust | Encrypted Access</p>
+</header>
+
+<main class="dashboard">
+
+  <!-- Patient Profile -->
+  <section class="card profile">
+    <h2>👤 Welcome, Patient</h2>
+    <p>Data Status: <span class="secure">🔒 Fully Encrypted</span></p>
+  </section>
+
+  <!-- Medical Timeline -->
+  <section class="card">
+    <h2>📊 Medical History</h2>
+    <ul class="timeline" id="timeline"><li>
+    <span>2025</span>
+    <div>
+      <strong>Cardiology Report</strong>
+      <p>Apollo Hospital</p>
+      <small class="encrypted">🔒 Encrypted</small>
+    </div>
+  </li><li>
+    <span>2024</span>
+    <div>
+      <strong>Blood Test</strong>
+      <p>Fortis Clinic</p>
+      <small class="encrypted">🔒 Encrypted</small>
+    </div>
+  </li><li>
+    <span>2023</span>
+    <div>
+      <strong>MRI Scan</strong>
+      <p>NIMHANS</p>
+      <small class="encrypted">🔒 Encrypted</small>
+    </div>
+  </li></ul>
+  </section>
+
+  <!-- Access Control -->
+  <section class="card">
+    <h2>🔑 Access Permissions</h2>
+    <div id="accessList"><div class="access-row">
+      <span>Dr. Aishwarya M B(Cardiology) (Expires: 24 hours)</span>
+      <button onclick="revokeAccess(0)">Revoke</button>
+    </div><div class="access-row">
+      <span>Fortis Hospital (Expires: 12 hours)</span>
+      <button onclick="revokeAccess(1)">Revoke</button>
+    </div></div>
+  </section>
+
+  <!-- Emergency Access -->
+  <section class="card emergency">
+    <h2>🚨 Emergency Access</h2>
+    <p>Grant temporary access in emergencies only.</p>
+    <button class="danger" onclick="activateEmergency()">Activate Emergency Mode</button>
+    <p id="emergencyStatus"></p>
+  </section>
+
+</main>
+
+<script src="./Secure Patient Medical Portal_files/app.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

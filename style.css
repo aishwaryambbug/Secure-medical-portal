@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+}
+
+header {
+  background: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.dashboard {
+  max-width: 900px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.profile {
+  grid-column: span 2;
+}
+
+.secure {
+  color: green;
+  font-weight: bold;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.timeline span {
+  font-weight: bold;
+  color: #003366;
+}
+
+.encrypted {
+  color: green;
+  font-size: 0.8em;
+}
+
+.access-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+button {
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.emergency {
+  grid-column: span 2;
+  border: 2px solid red;
+}
+
+.danger {
+  background: red;
+}
+
+#emergencyStatus {
+  margin-top: 10px;
+  font-weight: bold;
+  color: red;
+}
+.profile,
+.emergency {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Horizontal center */
+  justify-content: center; /* Vertical center */
+  text-align: center;
+}
+.card h2 {
+  text-align: center;
+}
+
+.timeline li {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.timeline span {
+  margin-bottom: 5px;
+}
